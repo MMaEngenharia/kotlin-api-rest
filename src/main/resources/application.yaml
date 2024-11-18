@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: proj01
+  datasource:
+    url: jdbc:h2:file:./db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    properties.hibernate.dialect: org.hibernate.dialect.H2Dialect
+    hibernate.ddl-auto: update
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+
+
+security:
+  key: somerandomkeywhichislongenoughtoalignwiththejwtspecification
